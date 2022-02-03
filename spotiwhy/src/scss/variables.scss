@@ -1,0 +1,37 @@
+@import '~vuetify/src/styles/styles';
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+
+$custom-colors: (
+  body: #646567,
+  headings: #646567,
+  primary: #E30613,
+  secondary: #e8e9e8,
+  light-grey: #fafafa,
+  dark-grey: #d7d7d7,
+  red: #e30512,
+  green: #7ae090,
+  orange: #ffac14,
+);
+
+$material-light-custom: (
+    'text': (
+      'theme': map-get($shades, 'white'),
+      'primary': map-get($custom-colors, 'body'),
+    ),
+);
+
+$material-light: map-deep-merge($material-light, $material-light-custom);
+
+h1 {
+  font-size: 30px;
+  line-height: 1;
+  font-weight: 500;
+  margin: 0;
+}
+
+h2 {
+  font-size: 22px;
+  line-height: 1;
+  font-weight: 500;
+  margin: 0;
+}
