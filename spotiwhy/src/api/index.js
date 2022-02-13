@@ -9,6 +9,29 @@ function getSongs() {
     ).then(response => (response.data))
 }
 
+function getArtists() {
+    return Vue.prototype.$axios.get(
+        `${basePath}/artists`,
+    ).then(response => (response.data))
+}
+
+function getArtistsById(id) {
+    return Vue.prototype.$axios.get(
+        `${basePath}/artists?id=${id}`,
+    ).then(response => (response.data))
+}
+
+
+function GetSongsForArtist(artistName) {
+    return Vue.prototype.$axios.get(
+        `${basePath}/songs?artist=${artistName}`,
+    ).then(response => (response.data))
+}
+
+
 export default {
-    getSongs
+    getSongs,
+    getArtists,
+    getArtistsById,
+    GetSongsForArtist,
 }

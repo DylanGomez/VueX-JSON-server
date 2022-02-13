@@ -1,19 +1,17 @@
 <template>
-  <div>
-    <Songs></Songs>
-    <Artists></Artists>
-
-  </div>
+  <song-table :songs="allSongs" />
 </template>
 
 <script>
-import Songs from './Songs.vue'
-import Artists from './Artists.vue'
-
 import { mapGetters } from 'vuex'
+import SongTable from '../components/SongTable.vue'
 
 export default {
-  name: 'home',
+  name: 'songs',
+
+  components: {
+    SongTable
+  },
 
   data() {
     return {
@@ -29,11 +27,6 @@ export default {
     allSongs() {
       return this.songs
     },
-  },
-
-  components: {
-    Songs,
-    Artists,
   },
 
   created() {
