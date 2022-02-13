@@ -28,7 +28,7 @@ const routes = [
         path: '/artists/:id',
         name: 'artist',
         component: () => import('../views/Artist.vue'),
-        props: route => ({
+        props: (route) => ({
             artistId: route.params.id,
         }),
     },
@@ -36,16 +36,13 @@ const routes = [
         path: '/playlists',
         name: 'Playlists',
         component: () => import('../views/Playlists.vue'),
-        props: route => ({
-            artistId: route.params.id,
-        }),
     },
     {
         path: '/playlists/:id',
         name: 'Playlist',
         component: () => import('../views/Playlist.vue'),
-        props: route => ({
-            artistId: route.params.id,
+        props: (route) => ({
+            playlistId: route.params.id,
         }),
     },
 ]

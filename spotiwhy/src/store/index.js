@@ -11,7 +11,7 @@ export default new Vuex.Store({
     modules: {
         songs,
         artists,
-        playlists
+        playlists,
     },
     plugins: [],
     strict: false,

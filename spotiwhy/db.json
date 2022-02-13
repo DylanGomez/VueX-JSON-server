@@ -33761,16 +33761,28 @@
   ],
   "playlists": [
     {
-      "name": "bound editItem",
-      "id": 3
-    },
-    {
-      "name": "bound editItem",
+      "name": "new playlist",
       "id": 4
     },
     {
-      "name": "bound editItem",
+      "name": "new",
       "id": 5
+    },
+    {
+      "name": "new ",
+      "id": 6
+    }
+  ],
+  "playlistSongs": [
+    {
+      "id": 1,
+      "playlistId": 1,
+      "songId": 4
+    },
+    {
+      "id": 2,
+      "playlistId": 1,
+      "songId": 5
     }
   ]
 }

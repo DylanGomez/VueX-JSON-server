@@ -9,8 +9,8 @@ const state = {
 }
 
 const getters = {
-    playlists: state => state.playlists,
-    getPlaylistById: state => id => state.playlists.find(playlist => playlist.id === id),
+    playlists: (state) => state.playlists,
+    getPlaylistById: (state) => (id) => state.playlists.find((playlist) => playlist.id === id),
 }
 
 const actions = {
@@ -21,7 +21,7 @@ const actions = {
                 commit(SET_PLAYLISTS, playlists)
                 return state.playlists
             })
-            .catch(error => console.warn('Error fetching playlists', error))
+            .catch((error) => console.warn('Error fetching playlists', error))
     },
 }
 

@@ -9,8 +9,8 @@ const state = {
 }
 
 const getters = {
-    artists: state => state.artists,
-    getArtistById: state => id => state.artists.find(artist => artist.id === id),
+    artists: (state) => state.artists,
+    getArtistById: (state) => (id) => state.artists.find((artist) => artist.id === id),
 }
 
 const actions = {
@@ -21,7 +21,7 @@ const actions = {
                 commit(SET_ARTISTS, artists)
                 return state.artists
             })
-            .catch(error => console.warn('Error fetching artists', error))
+            .catch((error) => console.warn('Error fetching artists', error))
     },
 }
 

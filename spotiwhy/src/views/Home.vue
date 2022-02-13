@@ -1,43 +1,41 @@
 <template>
-  <div>
-    <Songs></Songs>
-    <Artists></Artists>
-
-  </div>
+    <div>
+        <songs></songs>
+        <artists></artists>
+    </div>
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
 import Songs from './Songs.vue'
 import Artists from './Artists.vue'
 
-import { mapGetters } from 'vuex'
-
 export default {
-  name: 'home',
+    name: 'home',
 
-  data() {
-    return {
-      searchInput: '',
-    }
-  },
-
-  computed: {
-    ...mapGetters([
-      'songs',
-    ]),
-
-    allSongs() {
-      return this.songs
+    data() {
+        return {
+            searchInput: '',
+        }
     },
-  },
 
-  components: {
-    Songs,
-    Artists,
-  },
+    computed: {
+        ...mapGetters([
+            'songs',
+        ]),
 
-  created() {
-    this.$store.dispatch('getSongs')
-  },
+        allSongs() {
+            return this.songs
+        },
+    },
+
+    components: {
+        Songs,
+        Artists,
+    },
+
+    created() {
+        this.$store.dispatch('getSongs')
+    },
 }
 </script>

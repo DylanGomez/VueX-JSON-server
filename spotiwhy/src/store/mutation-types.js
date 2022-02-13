@@ -3,4 +3,3 @@ export const SET_SONGS = 'SET_SONGS'
 export const SET_SONGS_FOR_ARTIST = 'SET_SONGS_FOR_ARTIST'
 export const SET_ARTISTS = 'SET_ARTISTS'
 export const SET_PLAYLISTS = 'SET_PLAYLISTS'
-
