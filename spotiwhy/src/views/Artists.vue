@@ -15,11 +15,13 @@
       :search="searchInput"
     >
       <template v-slot:item.actions="{ item }">
-        <router-link
-          :to="`/artists/${item.id}`"
-          class="btn btn-outline-secondary"
-        >
-          Open
+        <router-link :to="`/artists/${item.id}`">
+          <v-icon
+            small
+            class="mr-2"
+          >
+            mdi-account-music
+          </v-icon>
         </router-link>
       </template>
     </v-data-table>
@@ -60,22 +62,10 @@ export default {
     ...mapGetters([
       'artists',
     ]),
-
-    allArtists() {
-      return this.artists
-    },
   },
 
   created() {
     this.$store.dispatch('getArtists')
   },
-
-  methods: {
-    openArtistDetails(item) {
-      this.openedArtist = Object.assign({}, item)
-
-
-    },
-  }
 }
 </script>
