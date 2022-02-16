@@ -58,7 +58,7 @@ export default {
         try {
             await this.$store.dispatch('getPlaylists')
         } catch (error) {
-            console.warn('Action getArtists failed', error)
+            console.warn('Action getArtists failed', error) // eslint-disable-line no-console
         }
         this.playlist = this.currentPlaylist
         this.playlistSongs = await this.songsInPlaylist

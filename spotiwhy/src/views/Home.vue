@@ -13,6 +13,11 @@ import Artists from './Artists.vue'
 export default {
     name: 'home',
 
+    components: {
+        Songs,
+        Artists,
+    },
+
     data() {
         return {
             searchInput: '',
@@ -27,11 +32,6 @@ export default {
         allSongs() {
             return this.songs
         },
-    },
-
-    components: {
-        Songs,
-        Artists,
     },
 
     created() {

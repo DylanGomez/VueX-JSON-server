@@ -57,7 +57,9 @@
                     </v-card>
                 </v-dialog>
             </template>
+            // eslint-disable-next-line
             <template v-slot:item.actions="{ item }">
+                //unfinished part so item is unused
                 <v-icon
                     small
                     class="mr-2"

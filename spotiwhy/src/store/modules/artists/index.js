@@ -17,11 +17,10 @@ const actions = {
     getArtists({ commit, state }) {
         return api.getArtists()
             .then((artists) => {
-                console.log('in artist')
                 commit(SET_ARTISTS, artists)
                 return state.artists
             })
-            .catch((error) => console.warn('Error fetching artists', error))
+            .catch((error) => console.warn('Error fetching artists', error)) // eslint-disable-line no-console
     },
 }
 

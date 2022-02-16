@@ -54,10 +54,6 @@ module.exports = {
             template: 200,
         }],
         'vue/component-name-in-template-casing': ['error', 'kebab-case'],
-        'vue/html-indent': ['error', 4, {
-            attribute: 1,
-            alignAttributesVertically: false,
-        }],
         'vue/html-self-closing': ['error', {
             html: {
                 void: 'always',

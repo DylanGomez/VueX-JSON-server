@@ -187,10 +187,10 @@ export default {
 
     watch: {
         dialog(val) {
-            val || this.close()
+            return val || this.close()
         },
         dialogDelete(val) {
-            val || this.closeDelete()
+            return val || this.closeDelete()
         },
     },
 
@@ -225,7 +225,7 @@ export default {
                     id: this.editedIndex,
                 })
             } catch (error) {
-                console.warn('Error posting playlist', error)
+                console.warn('Error posting playlist', error) // eslint-disable-line no-console
             }
             this.initialize()
             this.closeDelete()
@@ -255,7 +255,7 @@ export default {
                         name: this.editedItem.name,
                     })
                 } catch (error) {
-                    console.warn('Error posting playlist', error)
+                    console.warn('Error posting playlist', error) // eslint-disable-line no-console
                 }
             } else {
                 try {
@@ -263,7 +263,7 @@ export default {
                         name: this.editedItem.name,
                     })
                 } catch (error) {
-                    console.warn('Error posting playlist', error)
+                    console.warn('Error posting playlist', error) // eslint-disable-line no-console
                 }
             }
             this.initialize()

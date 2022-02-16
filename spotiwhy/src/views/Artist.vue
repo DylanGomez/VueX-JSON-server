@@ -42,7 +42,7 @@ export default {
         try {
             await this.$store.dispatch('getArtists')
         } catch (error) {
-            console.warn('Action getArtists failed', error)
+            console.warn('Action getArtists failed', error) // eslint-disable-line no-console
         }
         this.artistSongs = await api.GetSongsForArtist(this.currentArtist.name)
     },

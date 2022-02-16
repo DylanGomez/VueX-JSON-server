@@ -19,7 +19,7 @@ const actions = {
                 commit(SET_SONGS, songs)
                 return state.songs
             })
-            .catch((error) => console.warn('Error fetching songs', error))
+            .catch((error) => console.warn('Error fetching songs', error)) // eslint-disable-line no-console
     },
 
     getSongsForArtist({ commit, state }, { artistName }) {
@@ -28,6 +28,7 @@ const actions = {
                 commit(SET_SONGS_FOR_ARTIST, filterSongs)
                 return state.filterSongsForArtist
             })
+            // eslint-disable-next-line
             .catch((error) => console.warn(`Error fetching songs for artist${artistName}`, error))
     },
 }

@@ -17,11 +17,10 @@ const actions = {
     getPlaylists({ commit, state }) {
         return api.getPlaylists()
             .then((playlists) => {
-                console.log('in playlist')
                 commit(SET_PLAYLISTS, playlists)
                 return state.playlists
             })
-            .catch((error) => console.warn('Error fetching playlists', error))
+            .catch((error) => console.warn('Error fetching playlists', error)) // eslint-disable-line no-console
     },
 }
 
